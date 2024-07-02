@@ -21,7 +21,7 @@ const [role,setRole]= useState(employee.role);
 const handleSubmit = async(e)=>{
     e.preventDefault();
     try {
-        const response = await axios.put(`http://localhost:5000/api/update-employee/${id}`,{name,email,age,salary,designation,role});
+        const response = await axios.put(`https://employee-management-backend-zoar.onrender.com/api/update-employee/${id}`,{name,email,age,salary,designation,role});
         dispatch(updateEmployee(response.data.result));
         navigate('/');
     } catch (error) {

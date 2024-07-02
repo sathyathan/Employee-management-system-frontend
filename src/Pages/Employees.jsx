@@ -23,7 +23,7 @@ const fetchData = async ()=>{
 
 const handleDelete = async (id)=>{
    try {
-    const response = await axios.delete(`http://localhost:5000/api/delete-employee/${id}`)
+    const response = await axios.delete(`https://employee-management-backend-zoar.onrender.com/api/delete-employee/${id}`)
     dispatch(deleteEmployee({id}))
 
    } catch (error) {
