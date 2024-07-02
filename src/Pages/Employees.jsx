@@ -14,7 +14,7 @@ useEffect (()=>{
 
 const fetchData = async ()=>{
     try {
-       const response = await axios.get("http://localhost:5000/api/get-employee");
+       const response = await axios.get("https://employee-management-backend-zoar.onrender.com/api/get-employee");
        dispatch(getEmployee(response.data.result));
     } catch (error) {
         console.log(error);
