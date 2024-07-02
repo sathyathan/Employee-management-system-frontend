@@ -19,7 +19,7 @@ const [role,setRole]= useState();
 const handleSubmit = async(e)=>{
 e.preventDefault();
 try {
-    const response = await axios.post("https://employee-management-backend-zoar.onrender.com/api/create-employee/api/create-employee",{name,email,age,salary,designation,role})
+    const response = await axios.post("https://employee-management-backend-zoar.onrender.com/api/create-employee",{name,email,age,salary,designation,role})
     dispatch(createEmployee(response.data.result));
     navigate('/');
 } catch (error) {
